@@ -7,7 +7,7 @@ import Nav from './components/Nav'
 
 import './styles/app.scss' 
 
-import data from './util';
+import data from './data';
 
 function App() {
   //state
@@ -35,7 +35,7 @@ function App() {
       {/* <h1>Music Player</h1> */}
       <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus}/>
       <Song currentSong={currentSong}/>
-      <Player setCurrentSong={setCurrentSong} songs={songs} setSongInfo={setSongInfo} songInfo={songInfo} audioRef={audioRef} isPlaying={isPlaying} setIsPlaying={setIsPlaying} currentSong={currentSong}/>
+      <Player setSongs={setSongs} setCurrentSong={setCurrentSong} songs={songs} setSongInfo={setSongInfo} songInfo={songInfo} audioRef={audioRef} isPlaying={isPlaying} setIsPlaying={setIsPlaying} currentSong={currentSong}/>
       <Library libraryStatus={libraryStatus} setSongs={setSongs} isPlaying={isPlaying} audioRef={audioRef} songs={songs} setCurrentSong={setCurrentSong}/>
       <audio onLoadedMetadata={timeUpdateHandler} onTimeUpdate={timeUpdateHandler} ref={audioRef} src={currentSong.audio}></audio>
     </div>

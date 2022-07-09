@@ -1,5 +1,6 @@
 import React from "react";
 import home1 from "../img/home1.png";
+import Wave from "./wave";
 import { About, Description, Image, Hide } from "../styles";
 
 import { motion } from "framer-motion";
@@ -35,6 +36,7 @@ const AboutSection = () => {
           alt='Guy with a camera'
         />
       </Image>
+      <Wave />
     </About>
   );
 };

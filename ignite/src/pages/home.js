@@ -17,6 +17,7 @@ const Home = () => {
   //   console.log(newGames);
   return (
     <GameList>
+      <GameDetail />
       <h2>Upcoming Games</h2>
       <Games>
         {upComing.map((data) => (
@@ -53,7 +54,6 @@ const Home = () => {
           />
         ))}
       </Games>
-      <GameDetail />
     </GameList>
   );
 };

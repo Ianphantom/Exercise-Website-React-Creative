@@ -10,9 +10,7 @@ import { useLocation } from "react-router-dom";
 
 const Home = () => {
   const location = useLocation();
-  const path = location.pathname.split("");
-  const pathId = path[2];
-
+  const pathId = location.pathname.split("/")[2];
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(loadGames());

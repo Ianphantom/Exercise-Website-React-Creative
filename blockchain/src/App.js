@@ -16,6 +16,7 @@ import DetailProperty from "./pages/DetailProperty";
 import PenjadwalanForm from "./pages/PenjadwalanForm";
 import PenjadwalanSelesai from "./pages/PenjadwalanSelesai";
 import Tour from "./pages/Tour";
+import ChatButton from "./components/ChatButton";
 
 function App() {
   // const location = useLocation();
@@ -36,7 +37,7 @@ function App() {
           element={<PenjadwalanSelesai />}
         />
       </Routes>
-      {/* <Beranda /> */}
+      <ChatButton />
       <Footer />
     </div>
   );

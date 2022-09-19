@@ -12,6 +12,7 @@ import RumahView2 from "../img/RumahView2.png";
 import RumahView3 from "../img/RumahView3.png";
 import RumahTour from "../img/videoTour.png";
 import MapLocation from "../img/map.png";
+import ChatIcon from "../img/chat.svg";
 
 // Todo Nanti yang SVG dibuatin satu file untuk satu SVG. Truss di Import ke File yang ini yaa!
 
@@ -148,21 +149,7 @@ const DetailProperty = () => {
           </FasilitasItem>
         </Fasilitas>
         <Chat>
-          <svg
-            width='21'
-            height='21'
-            viewBox='0 0 21 21'
-            fill='none'
-            xmlns='http://www.w3.org/2000/svg'
-          >
-            <path
-              fill-rule='evenodd'
-              clip-rule='evenodd'
-              d='M3.83317 2.16602H17.1665C18.0832 2.16602 18.8332 2.91602 18.8332 3.83268V13.8327C18.8332 14.7493 18.0832 15.4993 17.1665 15.4993H5.49984L2.1665 18.8327L2.17484 3.83268C2.17484 2.91602 2.9165 2.16602 3.83317 2.16602ZM14.6665 7.99935H6.33317C5.87484 7.99935 5.49984 8.37435 5.49984 8.83268C5.49984 9.29102 5.87484 9.66602 6.33317 9.66602H14.6665C15.1248 9.66602 15.4998 9.29102 15.4998 8.83268C15.4998 8.37435 15.1248 7.99935 14.6665 7.99935ZM11.3332 12.166H6.33317C5.87484 12.166 5.49984 11.791 5.49984 11.3327C5.49984 10.8743 5.87484 10.4993 6.33317 10.4993H11.3332C11.7915 10.4993 12.1665 10.8743 12.1665 11.3327C12.1665 11.791 11.7915 12.166 11.3332 12.166ZM6.33317 7.16602H14.6665C15.1248 7.16602 15.4998 6.79102 15.4998 6.33268C15.4998 5.87435 15.1248 5.49935 14.6665 5.49935H6.33317C5.87484 5.49935 5.49984 5.87435 5.49984 6.33268C5.49984 6.79102 5.87484 7.16602 6.33317 7.16602Z'
-              fill='#0D3DE5'
-            />
-          </svg>
-
+          <img src={ChatIcon} alt='Chat Icon' />
           <div className='chatText'>Chat</div>
         </Chat>
       </FasilitasChat>

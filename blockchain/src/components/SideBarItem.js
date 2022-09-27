@@ -14,6 +14,7 @@ const StyledItem = styled.div`
   display: flex;
   align-items: center;
   gap: 12px;
+  cursor: pointer;
   .desc {
     font-weight: 400;
     font-size: 16px;

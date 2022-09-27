@@ -14,7 +14,7 @@ const Login = ({ userRequest, setUserRequest, isLogin, setIsLogin }) => {
     // ! Nanti disini ditambahkan fungsi ngecheck ke database apakah datanya ada atau tidak
     // * yang sekarang dianggap datanya ada dulu. ini masih hardcoded. Nanti kalau user dah login bakal dapat jwt token gitu.
     const userToken = "inimasihhardcoded";
-    sessionStorage.setItem("token", userToken);
+    localStorage.setItem("token", userToken);
     setIsLogin(userToken);
     navigate("/");
   };

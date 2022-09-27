@@ -10,7 +10,7 @@ import Notification from "../img/notification.svg";
 import NotificationExist from "../img/notificationExist.svg";
 import UserImage from "../img/userImage.svg";
 
-const Header = ({ isLogin }) => {
+const Header = ({ isLogin, setIsLogin, getToken }) => {
   let navigate = useNavigate();
   const brandHandler = () => {
     navigate(`/`);
@@ -76,7 +76,16 @@ const Header = ({ isLogin }) => {
         )}
       </NavContainer>
       {notificationClicked && <NotificationComponent />}
-      {sideBarClicked && <SideBar UserImage={UserImage} />}
+      {sideBarClicked && (
+        <SideBar
+          UserImage={UserImage}
+          isLogin={isLogin}
+          setIsLogin={setIsLogin}
+          getToken={getToken}
+          sideBarClicked={sideBarClicked}
+          setsideBarClicked={setsideBarClicked}
+        />
+      )}
     </StyledNav>
   );
 };

@@ -10,8 +10,26 @@ import love from "../img/love.svg";
 import transaksi from "../img/transaksi.svg";
 import pengaturan from "../img/pengaturan.svg";
 import logout from "../img/logout.svg";
+import { useNavigate } from "react-router-dom";
 
-const SideBar = ({ UserImage }) => {
+const SideBar = ({
+  UserImage,
+  setIsLogin,
+  getToken,
+  sideBarClicked,
+  setsideBarClicked,
+}) => {
+  const navigate = useNavigate();
+  const logoutHandler = () => {
+    localStorage.removeItem("token");
+    setIsLogin(getToken());
+    setsideBarClicked(!sideBarClicked);
+
+    sideBarClicked
+      ? (document.body.style.overflow = "auto")
+      : (document.body.style.overflow = "hidden");
+    navigate("/");
+  };
   return (
     <SideBarContainer>
       <div className='container'>
@@ -26,7 +44,9 @@ const SideBar = ({ UserImage }) => {
             <SideBarItem icon={love} desc={`Wishlist`} />
             <SideBarItem icon={transaksi} desc={`Daftar Transaksi`} />
             <SideBarItem icon={pengaturan} desc={`Pengaturan`} />
-            <SideBarItem icon={logout} desc={`Keluar`} />
+            <div onClick={logoutHandler}>
+              <SideBarItem icon={logout} desc={`Keluar`} />
+            </div>
           </div>
         </div>
       </div>

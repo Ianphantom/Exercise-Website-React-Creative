@@ -22,7 +22,7 @@ import { useState } from "react";
 
 function App() {
   const getToken = () => {
-    const userToken = sessionStorage.getItem("token");
+    const userToken = localStorage.getItem("token");
 
     if (userToken != null) return userToken;
 
@@ -32,7 +32,7 @@ function App() {
   return (
     <div className='App'>
       <GlobalStyle />
-      <Header isLogin={isLogin} setIsLogin={setIsLogin} />
+      <Header isLogin={isLogin} setIsLogin={setIsLogin} getToken={getToken} />
       <Routes>
         <Route
           exact

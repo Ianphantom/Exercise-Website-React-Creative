@@ -10,10 +10,14 @@ import Notification from "../img/notification.svg";
 import NotificationExist from "../img/notificationExist.svg";
 import UserImage from "../img/userImage.svg";
 
-const Header = () => {
+const Header = ({ isLogin }) => {
   let navigate = useNavigate();
   const brandHandler = () => {
     navigate(`/`);
+  };
+
+  const loginHandler = () => {
+    navigate("/masuk");
   };
 
   // * Untuk sekarang notifikasi nya di set ke True dulu aja.
@@ -52,21 +56,24 @@ const Header = () => {
           <Link to='/'>KONTAK</Link>
           <Link to='/'>TENTANG KAMI</Link>
         </StyledNavItem>
-        {/* <StyledLoginButton>
-          <div className='login'>MASUK</div>
-        </StyledLoginButton> */}
-        <StyledUserSection>
-          {notificationExist ? (
-            <img
-              src={NotificationExist}
-              onClick={showNotification}
-              alt='Notification'
-            />
-          ) : (
-            <img src={Notification} alt='Notification' />
-          )}
-          <img src={UserImage} onClick={showSideBar} alt='User' />
-        </StyledUserSection>
+        {isLogin ? (
+          <StyledUserSection>
+            {notificationExist ? (
+              <img
+                src={NotificationExist}
+                onClick={showNotification}
+                alt='Notification'
+              />
+            ) : (
+              <img src={Notification} alt='Notification' />
+            )}
+            <img src={UserImage} onClick={showSideBar} alt='User' />
+          </StyledUserSection>
+        ) : (
+          <StyledLoginButton onClick={loginHandler}>
+            <div className='login'>MASUK</div>
+          </StyledLoginButton>
+        )}
       </NavContainer>
       {notificationClicked && <NotificationComponent />}
       {sideBarClicked && <SideBar UserImage={UserImage} />}
@@ -125,23 +132,23 @@ const StyledUserSection = styled.div`
 
 // * ini styling untuk yang "masuk"
 
-// const StyledLoginButton = styled.div`
-//   width: 148px;
-//   height: 51px;
-//   background: #eff0f4;
-//   border-radius: 5px;
-//   text-align: center;
-//   display: flex;
-//   text-align: center;
-//   align-items: center;
-//   justify-content: center;
-
-//   .login {
-//     font-weight: 600;
-//     font-size: 18px;
-//     line-height: 27px;
-//     color: #0d3de5;
-//   }
-// `;
+const StyledLoginButton = styled.div`
+  width: 148px;
+  height: 51px;
+  background: #eff0f4;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  .login {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    color: #0d3de5;
+  }
+`;
 
 export default Header;

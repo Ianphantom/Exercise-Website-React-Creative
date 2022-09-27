@@ -9,6 +9,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 // Import Pages
+import AkunManagement from "./pages/AkunManagement";
 import Beranda from "./pages/Beranda";
 import Tokenisasi from "./pages/Tokenisasi";
 import Properti from "./pages/Properti";
@@ -17,14 +18,28 @@ import PenjadwalanForm from "./pages/PenjadwalanForm";
 import PenjadwalanSelesai from "./pages/PenjadwalanSelesai";
 import Tour from "./pages/Tour";
 import ChatButton from "./components/ChatButton";
+import { useState } from "react";
 
 function App() {
-  // const location = useLocation();
+  const getToken = () => {
+    const userToken = sessionStorage.getItem("token");
+
+    if (userToken != null) return userToken;
+
+    return false;
+  };
+  const [isLogin, setIsLogin] = useState(getToken());
   return (
     <div className='App'>
       <GlobalStyle />
-      <Header />
+      <Header isLogin={isLogin} setIsLogin={setIsLogin} />
       <Routes>
+        <Route
+          exact
+          path='/masuk'
+          element={<AkunManagement isLogin={isLogin} setIsLogin={setIsLogin} />}
+        />
+
         <Route exact path='/' element={<Beranda />} />
         <Route exact path='/tokenisasi' element={<Tokenisasi />} />
         <Route exact path='/properti' element={<Properti />} />
@@ -37,7 +52,7 @@ function App() {
           element={<PenjadwalanSelesai />}
         />
       </Routes>
-      <ChatButton />
+      {isLogin && <ChatButton />}
       <Footer />
     </div>
   );

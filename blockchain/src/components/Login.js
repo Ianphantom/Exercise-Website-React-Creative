@@ -98,7 +98,7 @@ const LoginStyled = styled.div`
     margin-top: 25px;
     width: 100%;
     text-align: center;
-    background: #219ebc;
+    background: #0d3de5;
     border-radius: 5px;
     padding: 8px 0px;
     font-weight: 600;
@@ -111,12 +111,13 @@ const LoginStyled = styled.div`
   .register {
     margin-top: 17px;
     margin-bottom: 90px;
+    text-align: center;
     font-weight: 400;
     font-size: 18px;
     line-height: 20px;
     color: #353535;
     span {
-      color: #219ebc;
+      color: #0d3de5;
       font-weight: 600;
       cursor: pointer;
     }

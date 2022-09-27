@@ -11,13 +11,14 @@ import ImageLogin from "../img/motion.gif";
 
 const AkunManagement = ({ setIsLogin, isLogin }) => {
   const [userRequest, setUserRequest] = useState("masuk");
+
   // console.log(pathName);
   return (
     <AkunStyled className='container'>
-      <LeftSection>
+      <LeftSection className={userRequest === "masuk" ? "masuk" : "register"}>
         <img src={ImageLogin} alt='Login Preview' />
       </LeftSection>
-      <RightSection>
+      <RightSection className={userRequest === "masuk" ? "masuk" : "register"}>
         {userRequest === "masuk" ? (
           <Login
             userRequest={userRequest}
@@ -42,14 +43,24 @@ const AkunStyled = styled.div`
 `;
 
 const LeftSection = styled.div`
-  width: 67%;
+  &.masuk {
+    width: 67%;
+  }
+  &.register {
+    width: 50%;
+  }
   img {
     width: 100%;
   }
 `;
 
 const RightSection = styled.div`
-  width: 33%;
+  &.masuk {
+    width: 33%;
+  }
+  &.register {
+    width: 50%;
+  }
 `;
 
 export default AkunManagement;

@@ -8,35 +8,35 @@ const AboutBlockchain = () => {
     <AboutBlockhains>
       <AboutBlockhainsContainer className='container'>
         <Description>
-          <h3>ABOUT</h3>
-          <h1>About Blockchain</h1>
+          <h3>Info</h3>
+          <h1>Tentang Blockchain</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-            tortor nisl, dapibus vitae tortor ut, gravida porta arcu. Aenean
-            tincidunt nulla quis viverra tempus. Ut ac interdum diam. Aliquam
-            erat volutpat. Proin elit ex, pretiu
+            Blockchain diperkenalkan sebagai suatu database jaringan yang
+            terdistribusi (Distributed Ledger Technology) dengan menggunakan
+            sistem yang kompleks, dimana memungkinkan terjadi nya suatu
+            transaksi yang aman tanpa menggunakan perantara.
           </p>
         </Description>
         <CardAbout>
           <CardInd>
-            <h2>PENAWARAN</h2>
+            <h2>DIGITALISASI</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              tortor nisl, dapibus vitae tortor ut,
+              Token yang didapat setelah melakukan pendaftaran akan dijadikan
+              sebagai sertifikat digital properti
             </p>
           </CardInd>
           <CardInd>
-            <h2>UPDATE</h2>
+            <h2>BALIK NAMA</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              tortor nisl, dapibus vitae tortor ut,
+              Dengan papandaya pembeli tidak perlu lagi melakukan proses balik
+              nama properti
             </p>
           </CardInd>
           <CardInd>
-            <h2>SECURE</h2>
+            <h2>MENJUAL</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              tortor nisl, dapibus vitae tortor ut,
+              Kemudahan menjual properti yang sudah di daftarkan dan juga yang
+              sudah di beli. Cukup 1 klik, properti anda akan segera dilisting
             </p>
           </CardInd>
         </CardAbout>

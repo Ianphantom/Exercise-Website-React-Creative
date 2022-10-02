@@ -9,10 +9,10 @@ const TopDeals = () => {
   return (
     <StyledTopDeals>
       <div className='container'>
-        <h1>Top Deals of The Week</h1>
+        <h1>Penawaran Terbaik Minggu Ini</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tortor
-          nisl, dapibus vitae tortor ut, gravida porta
+          Cek rekomendasi properti terbaik dari kami serta informasi
+          terlengkapnya
         </p>
         <ImageContainer>
           <div className='image'>

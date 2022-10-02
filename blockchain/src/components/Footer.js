@@ -6,11 +6,11 @@ const Footer = () => {
     <StyledFooter>
       <FooterContainer className='container'>
         <div className='summary'>
-          <h1>Blockchain</h1>
+          <h1>Realty</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-            tortor nisl, dapibus vitae tortor ut, gravida porta arcu. Aenean
-            tincidunt nulla quis viverra tempus.
+            Realty adalah situs properti terbaik untuk mencari dan menjual
+            properti agar membuat jual beli properti lebih mudah dengan
+            menggunakan teknologi blockchain
           </p>
         </div>
         <div className='about-us'>

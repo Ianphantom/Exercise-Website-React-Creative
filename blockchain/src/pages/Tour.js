@@ -61,10 +61,10 @@ const Tour = () => {
           </div>
           <div className='cancelReschedule'>
             <div className='jadwalButton' id='cancel'>
-              Cancel
+              Batal
             </div>
             <div className='jadwalButton' id='reschedule'>
-              Reschedule
+              Ubah Jadwal
             </div>
           </div>
         </div>
@@ -75,7 +75,7 @@ const Tour = () => {
               <li className='active'>
                 <div className='decsTitle'>Sudah Terjadwal</div>
                 <div className='desc'>
-                  Kami akan mencek apakah pemilik rumah dapat melakukan tour.
+                  Kami akan mengecek apakah pemilik rumah dapat melakukan tour.
                   Kami akan menghubungi lebih lanjut melalui telepon atau email
                 </div>
               </li>

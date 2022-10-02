@@ -9,9 +9,9 @@ const HomeSection1 = () => {
         <LandingDescription>
           <h1>Temukan tempat tinggal terbaik untuk keluarga</h1>
           <p>
-            Us which over of signs divide dominion deep fill bring they're meat
-            beho upon own earth without morning over third. Their male dry. They
-            are great appear whose land fly grass.
+            Tempat terbaik untuk Anda dalam mencari properti yang Anda inginkan.
+            Dilengkapi dengan teknologi blockchain yang dapat menjamin kemanan
+            Anda dalam membeli dan menjual properti.
           </p>
         </LandingDescription>
         <SearchBar>
@@ -91,7 +91,7 @@ const HomeSection1 = () => {
           </SearchInputContainer>
         </SearchBar>
         <TryAdvanceSearch>
-          Try Advance Search
+          Cari Properti Baru
           <svg
             width='24'
             height='24'
@@ -106,7 +106,7 @@ const HomeSection1 = () => {
           </svg>
         </TryAdvanceSearch>
         <TypePop>
-          <div className='typePop-desc'>Popular Type</div>
+          <div className='typePop-desc'>Tipe Popular</div>
           <a href='/'>TYPE32</a>
           <a href='/'>TYPE48</a>
           <a href='/'>TYPE64</a>

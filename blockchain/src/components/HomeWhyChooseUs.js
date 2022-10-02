@@ -5,7 +5,7 @@ const WhyChooseUs = () => {
   return (
     <StyledReason>
       <div className='container'>
-        <StyledTitle>Why Choose Us</StyledTitle>
+        <StyledTitle>Kenapa Memilih Realty</StyledTitle>
         <ReasonContainer>
           <StyledReasonItem>
             <svg
@@ -21,8 +21,11 @@ const WhyChooseUs = () => {
               />
             </svg>
 
-            <h2>Property Insurance</h2>
-            <p>Lorem ipsum lalala lorem ipsum lallalallala</p>
+            <h2>Beli Properti Aman dan Mudah</h2>
+            <p>
+              Realty sebagai situs properti terpercaya siap membantu menemukan
+              properti idaman Anda
+            </p>
           </StyledReasonItem>
           <StyledReasonItem>
             <svg
@@ -45,8 +48,11 @@ const WhyChooseUs = () => {
               </defs>
             </svg>
 
-            <h2>Tax Advantage</h2>
-            <p>Lorem ipsum lalala lorem ipsum lallalallala</p>
+            <h2>Jual Properti Cepat</h2>
+            <p>
+              Jual properti lebih mudah dan cepat dengan fitur dan layanan
+              terbaik Realty
+            </p>
           </StyledReasonItem>
           <StyledReasonItem>
             <svg
@@ -66,8 +72,11 @@ const WhyChooseUs = () => {
               />
             </svg>
 
-            <h2>24 Hour Communication</h2>
-            <p>Lorem ipsum lalala lorem ipsum lallalallala</p>
+            <h2>24/7 Customer Care</h2>
+            <p>
+              Dapatkan bantuan untuk penjualan dan pembelian properti dengan
+              pelayanan 24/7 Customer Care dari Realty.
+            </p>
           </StyledReasonItem>
         </ReasonContainer>
       </div>

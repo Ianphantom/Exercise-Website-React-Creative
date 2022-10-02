@@ -2,6 +2,7 @@
 import GlobalStyle from "./components/GlobalStyle";
 // Import React Router Dom
 import { Routes, Route } from "react-router-dom";
+import { useState } from "react";
 
 // Header Import
 import Header from "./components/Header";
@@ -18,7 +19,7 @@ import PenjadwalanForm from "./pages/PenjadwalanForm";
 import PenjadwalanSelesai from "./pages/PenjadwalanSelesai";
 import Tour from "./pages/Tour";
 import ChatButton from "./components/ChatButton";
-import { useState } from "react";
+import DaftarTransaksi from "./pages/DaftarTransaksi";
 
 function App() {
   const getToken = () => {
@@ -46,6 +47,7 @@ function App() {
         <Route exact path='/detailproperti' element={<DetailProperty />} />
         <Route exact path='/penjadwalan' element={<PenjadwalanForm />} />
         <Route exact path='/tour' element={<Tour />} />
+        <Route exact path='/daftartransaksi' element={<DaftarTransaksi />} />
         <Route
           exact
           path='/penjadwalanberhasil'

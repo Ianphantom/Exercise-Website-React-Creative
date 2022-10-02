@@ -14,8 +14,8 @@ const TokenisasiSection = () => {
         <div className='left-section'>
           <h1>Ayo temukan penjualan yang tepat untuk Anda</h1>
           <h2>
-            Anda akan lebih mudah untuk menjual properti Anda. Lorem ipsum dolor
-            sit amet consectetur adipisicing elit. Numquam, sed.
+            Anda akan lebih mudah untuk menjual properti Anda dan kemanan yang
+            terjamin.
           </h2>
         </div>
         <SearchBar>

@@ -186,17 +186,14 @@ const DetailProperty = () => {
         <SectionDeskripsi>
           <SectionHeader>Deskripsi</SectionHeader>
           <div className='textDescription'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-            turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
-            nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
-            tellus elit sed risus. Maecenas eget condimentum velit, sit amet
-            feugiat lectus. Class aptent taciti sociosqu ad litora torquent per
-            conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus
-            enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex.
-            Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum
-            lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in
-            elementum tellus. Class aptent taciti sociosqu ad litora torquent
-            per conubia nostra, per inceptos himenaeos.
+            Properti yang dibangun pada tahun 2021 ini terletak di daerah
+            Surabaya yang menawarkan akomodasi yang luar biasa dan chic dengan
+            kolam renang outdoor pribadi, 4 kamar mandi, 1 toilet dan memiliki
+            halaman yang luas. Dibutuhkan sekitar 20 menit berkendara dari
+            properti ke Green Island Primary School. Bandara Halim Perdana
+            Kusuma dapat dicapai dalam waktu 30 menit berkendara dengan mobil.
+            Properti ini juga memiliki sertifikat hak milik, surat PBB, dan
+            pembayaran tagihan.
           </div>
           <div className='lihatLebih'>Lihat Lebih</div>
         </SectionDeskripsi>

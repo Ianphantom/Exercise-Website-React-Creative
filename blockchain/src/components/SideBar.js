@@ -40,6 +40,16 @@ const SideBar = ({
       : (document.body.style.overflow = "hidden");
     navigate("/daftartransaksi");
   };
+
+  const propertiHander = () => {
+    setIsLogin(getToken());
+    setsideBarClicked(!sideBarClicked);
+
+    sideBarClicked
+      ? (document.body.style.overflow = "auto")
+      : (document.body.style.overflow = "hidden");
+    navigate("/propertisaya");
+  };
   return (
     <SideBarContainer>
       <div className='container'>
@@ -50,7 +60,9 @@ const SideBar = ({
           </div>
           <hr />
           <div className='itemContainer'>
-            <SideBarItem icon={myProperty} desc={`Properti Saya`} />
+            <div onClick={propertiHander}>
+              <SideBarItem icon={myProperty} desc={`Properti Saya`} />
+            </div>
             <SideBarItem icon={love} desc={`Wishlist`} />
             <div onClick={transaksiHandler}>
               <SideBarItem icon={transaksi} desc={`Daftar Transaksi`} />

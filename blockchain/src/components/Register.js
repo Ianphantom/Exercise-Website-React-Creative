@@ -71,6 +71,16 @@ const Register = ({ userRequest, setUserRequest }) => {
             />
           </StyledInput>
         </div>
+        <StyledInput className='labelInput'>
+          <div className='label'>Alamat Wallet</div>
+          <input
+            className='one'
+            type='text'
+            name='wallet'
+            id='wallet'
+            placeholder='Masukkan Alamat Wallet Anda'
+          />
+        </StyledInput>
         <div className='term'>
           <input type='checkbox' name='setuju' id='setuju' />
           <div>Saya setuju dengan persyaratan yang berlaku</div>

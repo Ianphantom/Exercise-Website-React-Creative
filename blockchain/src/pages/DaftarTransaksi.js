@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import styled from "styled-components";
 import Breadcrumb from "../components/Breadcrumb";
@@ -6,6 +6,7 @@ import HeaderText from "../components/HeaderText";
 import TransaksiItem from "../components/TransaksiItem";
 
 const DaftarTransaksi = () => {
+  const [mintaToken, setMintaToken] = useState(false);
   return (
     <TransaksiStyled className='container'>
       <Breadcrumb

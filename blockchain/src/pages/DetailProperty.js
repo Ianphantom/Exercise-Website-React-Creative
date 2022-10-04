@@ -336,7 +336,14 @@ const DetailProperty = () => {
         </div>
         <div className='imageTour'>
           {/* Ini Masih Gambar dulu, ntar masukin video aja kalau videonya ketemu */}
-          <img src={RumahTour} alt='Rumah Tour' />
+          {/* <img src={RumahTour} alt='Rumah Tour' /> */}
+          <iframe
+            src={`https://my.matterport.com/show/?m=EAwuLRxafYg`}
+            width='100%'
+            height='500px'
+            frameborder='0'
+            title='360'
+          ></iframe>
         </div>
       </SectionEnam>
       <SectionTujuh>
@@ -346,7 +353,11 @@ const DetailProperty = () => {
         </div>
         <div className='mapLocation'>
           {/* Ini Juga masih image dulu, ntar cari plugin map */}
-          <img src={MapLocation} alt='Map Location' />
+          {/* <img src={MapLocation} alt='Map Location' /> */}
+          <iframe
+            src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1978.6403667640202!2d112.73269336772266!3d-7.322330499999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbcc00d2f29f%3A0x90772c67667df2e6!2sMAPS%20by%20MAPALSA!5e0!3m2!1sen!2sid!4v1664787717722!5m2!1sen!2sid'
+            referrerpolicy='no-referrer-when-downgrade'
+          ></iframe>
         </div>
       </SectionTujuh>
       <SectionDelapan>
@@ -800,6 +811,11 @@ const SectionTujuh = styled.div`
     img {
       width: 100%;
       border-radius: 20px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 400px;
     }
   }
 `;

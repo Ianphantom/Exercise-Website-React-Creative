@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import landingImage2 from "../img/landing2.png";
 
@@ -8,6 +9,10 @@ import feature2 from "../img/tokenFeature2.png";
 import feature3 from "../img/tokenFeature2.png";
 
 const TokenisasiSection = () => {
+  const navigate = useNavigate();
+  const searchHanlder = () => {
+    navigate("/daftarasset");
+  };
   return (
     <Tokenisasi className='container'>
       <RegistrasiContainer>
@@ -49,7 +54,7 @@ const TokenisasiSection = () => {
                 />
               </div>
             </SearchCategory>
-            <SearchButton>
+            <SearchButton onClick={searchHanlder}>
               CARI{" "}
               <svg
                 width='24'
@@ -203,6 +208,7 @@ const SearchButton = styled.div`
   font-size: 16px;
   line-height: 24px;
   color: #ffffff;
+  cursor: pointer;
 `;
 
 const FeaturesBar = styled.div`

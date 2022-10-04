@@ -234,6 +234,7 @@ const FormItem = styled.div`
       color: #797c86;
       &:focus {
         outline-color: #f5f7fa;
+        color: black;
       }
     }
   }

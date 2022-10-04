@@ -22,10 +22,7 @@ const WhyChooseUs = () => {
             </svg>
 
             <h2>Beli Properti Aman dan Mudah</h2>
-            <p>
-              Realty sebagai situs properti terpercaya siap membantu menemukan
-              properti idaman Anda
-            </p>
+            <div>Realty siap membantu menemukan properti idaman Anda</div>
           </StyledReasonItem>
           <StyledReasonItem>
             <svg
@@ -49,10 +46,10 @@ const WhyChooseUs = () => {
             </svg>
 
             <h2>Jual Properti Cepat</h2>
-            <p>
+            <div>
               Jual properti lebih mudah dan cepat dengan fitur dan layanan
               terbaik Realty
-            </p>
+            </div>
           </StyledReasonItem>
           <StyledReasonItem>
             <svg
@@ -73,10 +70,7 @@ const WhyChooseUs = () => {
             </svg>
 
             <h2>24/7 Customer Care</h2>
-            <p>
-              Dapatkan bantuan untuk penjualan dan pembelian properti dengan
-              pelayanan 24/7 Customer Care dari Realty.
-            </p>
+            <div>Kami menyediakan pelayanan 24/7 Customer Care dari Realty</div>
           </StyledReasonItem>
         </ReasonContainer>
       </div>
@@ -103,24 +97,20 @@ const ReasonContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin-bottom: 20px;
 `;
 
 const StyledReasonItem = styled.div`
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  color: #49555d;
   h2 {
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
-    /* line-height: 60px; */
     color: #608fe8;
-  }
-  p {
-    width: 222px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    /* line-height: 25px; */
-    text-align: center;
-    color: #49555d;
   }
 `;
 

@@ -10,7 +10,7 @@ const TransaksiItem = () => {
         <img src={homeTransactionIcon} alt='Home Transcation Icon' />
         <div className='type'>Rumah</div>
         <div className='tanggal'>28 Juli 2022</div>
-        <div className='status waitingConf'>Menunggu Konfirmasi</div>
+        <div className='status success'>Selesai</div>
         <div className='id'>ID/01002</div>
       </div>
       <div className='propertyTitle'>Rumah Kemang</div>
@@ -122,7 +122,7 @@ const TransaksiItem = () => {
       </div>
       <div className='acces'>
         <div className='moreDetail'>Lihat Detail Transaksi</div>
-        <div className='token'>Minta Token</div>
+        <div className='token success'>Minta Token</div>
         <div className='more'>
           <svg
             width='19'
@@ -278,6 +278,7 @@ const TransactionItem = styled.div`
       font-size: 14px;
       line-height: 22px;
       color: #0d3de5;
+      cursor: pointer;
     }
 
     .token {
@@ -288,12 +289,18 @@ const TransactionItem = styled.div`
       font-size: 14px;
       line-height: 22px;
       color: #ffffff;
+      cursor: pointer;
+
+      &.success {
+        background: #0d3de5;
+      }
     }
     .more {
       background: #ffffff;
       border: 1px solid #bec3d2;
       border-radius: 5px;
       padding: 5px 15px;
+      cursor: pointer;
     }
   }
 `;

@@ -20,6 +20,7 @@ import PenjadwalanSelesai from "./pages/PenjadwalanSelesai";
 import Tour from "./pages/Tour";
 import ChatButton from "./components/ChatButton";
 import DaftarTransaksi from "./pages/DaftarTransaksi";
+import DaftarkanAsset from "./pages/DaftarkanAsset";
 
 function App() {
   const getToken = () => {
@@ -48,6 +49,8 @@ function App() {
         <Route exact path='/penjadwalan' element={<PenjadwalanForm />} />
         <Route exact path='/tour' element={<Tour />} />
         <Route exact path='/daftartransaksi' element={<DaftarTransaksi />} />
+        <Route exact path='/daftarasset' element={<DaftarkanAsset />} />
+        <Route exact path='/propertisaya' element={<DaftarkanAsset />} />
         <Route
           exact
           path='/penjadwalanberhasil'

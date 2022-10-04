@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 
 import styled from "styled-components";
 import Breadcrumb from "../components/Breadcrumb";
 import HeaderText from "../components/HeaderText";
 import TransaksiItem from "../components/TransaksiItem";
 
+import Home2 from "../img/house2.png";
+import Home1 from "../img/house1.png";
+
 const DaftarTransaksi = () => {
-  const [mintaToken, setMintaToken] = useState(false);
   return (
     <TransaksiStyled className='container'>
       <Breadcrumb
@@ -26,7 +28,32 @@ const DaftarTransaksi = () => {
           />
           <input type='date' name='tanggal' id='tanggal' />
         </div>
-        <TransaksiItem />
+        <TransaksiItem
+          namaRumah={`Rumah Pakuwon Adora`}
+          pemilik={`Pak Muh`}
+          alamat={`Jl. Raya Parung Bogor, Jawa Barat`}
+          toilet={`2`}
+          kamar={`2`}
+          luas={`1400`}
+          harga={`850.000.000`}
+          status={`menunggu`}
+          tanggal={`28 Juli 2022`}
+          idTransaksi={`ID/01001`}
+          gambarRumah={Home2}
+        />
+        <TransaksiItem
+          namaRumah={`Rumah Kemang`}
+          pemilik={`Pak Muh`}
+          alamat={`Jl. Raya Parung Bogor, Jawa Barat`}
+          toilet={`2`}
+          kamar={`2`}
+          luas={`1400`}
+          harga={`850.000.000`}
+          status={`true`}
+          tanggal={`28 Juli 2022`}
+          idTransaksi={`ID/01001`}
+          gambarRumah={Home2}
+        />
       </div>
     </TransaksiStyled>
   );

@@ -149,7 +149,7 @@ const PropertiItem = ({
 };
 
 const TransactionItem = styled.div`
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   padding: 22px 29px;
   background: #ffffff;
   border: 1px solid #d9d9e3;

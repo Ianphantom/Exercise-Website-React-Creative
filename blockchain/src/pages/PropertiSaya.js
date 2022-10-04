@@ -58,6 +58,7 @@ const PropertiSaya = () => {
 };
 
 const PropertiContainer = styled.div`
+  margin-bottom: 40px;
   .propertiContainer {
     padding: 40px 30px;
     background: #ffffff;

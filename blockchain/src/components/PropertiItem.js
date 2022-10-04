@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import homeTransactionIcon from "../img/homeTransactionIcon.png";
 
@@ -14,6 +15,10 @@ const PropertiItem = ({
   idTransaksi,
   gambarRumah,
 }) => {
+  const navigate = useNavigate();
+  const moreDetailHandler = () => {
+    navigate("/detailtransaksi");
+  };
   return (
     <TransactionItem>
       <div className='title'>
@@ -118,7 +123,9 @@ const PropertiItem = ({
       <div className='acces'>
         {status === "true" && (
           <>
-            <div className='moreDetail'>Lihat Detail Transaksi</div>
+            <div className='moreDetail' onClick={moreDetailHandler}>
+              Lihat Detail Transaksi
+            </div>
             <div className='token success'>Jual</div>
             <div className='more'>
               <svg
@@ -228,25 +235,25 @@ const TransactionItem = styled.div`
         width: 30%;
         img {
           width: 100%;
-          height: 130px;
+          height: 160px;
         }
       }
       .propertyDetail {
         .pemilik {
           font-weight: 600;
-          font-size: 18px;
+          font-size: 20px;
           line-height: 28px;
           color: #1c1c1c;
-          margin-bottom: 6px;
+          margin-bottom: 10px;
         }
         .alamat {
           display: flex;
           align-items: center;
           font-weight: 400;
-          font-size: 12px;
+          font-size: 16px;
           line-height: 18px;
           color: #8e8e8e;
-          margin-bottom: 6px;
+          margin-bottom: 10px;
         }
         .detail {
           display: flex;
@@ -259,7 +266,7 @@ const TransactionItem = styled.div`
             align-items: center;
             gap: 10px;
             font-weight: 400;
-            font-size: 12px;
+            font-size: 16px;
             line-height: 30px;
             color: #8e8e8e;
           }

@@ -23,10 +23,10 @@ const PropertiSaya = () => {
           toilet={`2`}
           kamar={`2`}
           luas={`1400`}
-          status={`menunggu`}
+          status={`true`}
           tanggal={`28 Juli 2022`}
-          idTransaksi={`ID/01002`}
-          gambarRumah={Home1}
+          idTransaksi={`ID/01001`}
+          gambarRumah={Home2}
         />
         <PropertiItem
           namaRumah={`Rumah Kemang`}
@@ -35,10 +35,10 @@ const PropertiSaya = () => {
           toilet={`2`}
           kamar={`2`}
           luas={`1400`}
-          status={`true`}
+          status={`menunggu`}
           tanggal={`28 Juli 2022`}
-          idTransaksi={`ID/01001`}
-          gambarRumah={Home2}
+          idTransaksi={`ID/01002`}
+          gambarRumah={Home1}
         />
         <PropertiItem
           namaRumah={`Rumah Kemang`}

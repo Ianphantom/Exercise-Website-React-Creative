@@ -140,9 +140,10 @@ const TransaksiItem = ({
         </div>
       </div>
       <div className='acces'>
-        <div className='moreDetail'>Lihat Detail Transaksi</div>
         {status === "true" ? (
-          <div className='token success'>Minta Token</div>
+          <>
+            <div className='token success'>Minta Token</div>
+          </>
         ) : (
           <div className='token wait'>Minta Token</div>
         )}

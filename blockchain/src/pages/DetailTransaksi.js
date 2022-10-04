@@ -7,11 +7,11 @@ import TransaksiItem from "../components/TransaksiItem";
 
 import Home2 from "../img/house2.png";
 
-const DaftarTransaksi = () => {
+const DetailTransaksi = () => {
   return (
     <TransaksiStyled className='container'>
       <Breadcrumb
-        BreadcrumbText={`Home / Properti / Rumah / Beli / Daftar Transaksi`}
+        BreadcrumbText={`Home / Properti / Rumah / Beli / Detail Transaksi / ID / 01001`}
       />
       <HeaderText
         TitleText={`Daftar Transaksi`}
@@ -82,4 +82,4 @@ const TransaksiStyled = styled.div`
   }
 `;
 
-export default DaftarTransaksi;
+export default DetailTransaksi;

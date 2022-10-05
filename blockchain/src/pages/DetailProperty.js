@@ -10,9 +10,10 @@ import ScrollTop from "../components/ScrollTop";
 import RumahView1 from "../img/RumahView1.png";
 import RumahView2 from "../img/RumahView2.png";
 import RumahView3 from "../img/RumahView3.png";
-import RumahTour from "../img/videoTour.png";
-import MapLocation from "../img/map.png";
+// import RumahTour from "../img/videoTour.png";
+// import MapLocation from "../img/map.png";
 import ChatIcon from "../img/chat.svg";
+import { useState } from "react";
 
 // Todo Nanti yang SVG dibuatin satu file untuk satu SVG. Truss di Import ke File yang ini yaa!
 
@@ -21,9 +22,18 @@ const DetailProperty = () => {
   const jadwalHandler = () => {
     navigate("/penjadwalan");
   };
+
+  const [videoTypes, setVideoTypes] = useState("video");
+
   const beliHandler = () => {
     navigate("/pembelian");
   };
+
+  const videoHanlder = (section) => {
+    console.log(section);
+    setVideoTypes(`${section}`);
+  };
+
   return (
     <div className='container'>
       <ScrollTop />
@@ -42,8 +52,8 @@ const DetailProperty = () => {
             xmlns='http://www.w3.org/2000/svg'
           >
             <path
-              fill-rule='evenodd'
-              clip-rule='evenodd'
+              fillRule='evenodd'
+              clipRule='evenodd'
               d='M13.5 2.75C9.14625 2.75 5.625 6.27125 5.625 10.625C5.625 16.5312 13.5 25.25 13.5 25.25C13.5 25.25 21.375 16.5312 21.375 10.625C21.375 6.27125 17.8538 2.75 13.5 2.75ZM7.875 10.625C7.875 7.52 10.395 5 13.5 5C16.605 5 19.125 7.52 19.125 10.625C19.125 13.865 15.885 18.7137 13.5 21.74C11.16 18.7362 7.875 13.8313 7.875 10.625ZM10.6875 10.625C10.6875 9.0717 11.9467 7.8125 13.5 7.8125C14.5048 7.8125 15.4333 8.34856 15.9357 9.21875C16.4381 10.0889 16.4381 11.1611 15.9357 12.0312C15.4333 12.9014 14.5048 13.4375 13.5 13.4375C11.9467 13.4375 10.6875 12.1783 10.6875 10.625Z'
               fill='#797C86'
             />
@@ -59,8 +69,8 @@ const DetailProperty = () => {
             xmlns='http://www.w3.org/2000/svg'
           >
             <path
-              fill-rule='evenodd'
-              clip-rule='evenodd'
+              fillRule='evenodd'
+              clipRule='evenodd'
               d='M21.285 6.13625C21.06 5.4725 20.43 5 19.6875 5H7.3125C6.57 5 5.95125 5.4725 5.715 6.13625L3.375 12.875V21.875C3.375 22.4937 3.88125 23 4.5 23H5.625C6.24375 23 6.75 22.4937 6.75 21.875V20.75H20.25V21.875C20.25 22.4937 20.7563 23 21.375 23H22.5C23.1187 23 23.625 22.4937 23.625 21.875V12.875L21.285 6.13625ZM7.70625 7.25H19.2825L20.4975 10.7487H6.49125L7.70625 7.25ZM5.625 18.5H21.375V12.875H5.625V18.5ZM8.4375 14C7.50552 14 6.75 14.7555 6.75 15.6875C6.75 16.6195 7.50552 17.375 8.4375 17.375C9.36948 17.375 10.125 16.6195 10.125 15.6875C10.125 14.7555 9.36948 14 8.4375 14ZM16.875 15.6875C16.875 14.7555 17.6305 14 18.5625 14C19.4945 14 20.25 14.7555 20.25 15.6875C20.25 16.6195 19.4945 17.375 18.5625 17.375C17.6305 17.375 16.875 16.6195 16.875 15.6875Z'
               fill='#797C86'
             />
@@ -128,7 +138,7 @@ const DetailProperty = () => {
               fill='none'
               xmlns='http://www.w3.org/2000/svg'
             >
-              <g clip-path='url(#clip0_1367_5274)'>
+              <g clipPath='url(#clip0_1367_5274)'>
                 <path
                   d='M6.6665 0.5C7.49619 0.5 8.1665 1.17031 8.1665 2V3.5H14.1665V2C14.1665 1.17031 14.8368 0.5 15.6665 0.5C16.4962 0.5 17.1665 1.17031 17.1665 2V3.5H19.4165C20.6587 3.5 21.6665 4.50781 21.6665 5.75V8H0.666504V5.75C0.666504 4.50781 1.67432 3.5 2.9165 3.5H5.1665V2C5.1665 1.17031 5.83682 0.5 6.6665 0.5ZM0.666504 9.5H21.6665V22.25C21.6665 23.4922 20.6587 24.5 19.4165 24.5H2.9165C1.67432 24.5 0.666504 23.4922 0.666504 22.25V9.5ZM3.6665 13.25V14.75C3.6665 15.1625 4.004 15.5 4.4165 15.5H5.9165C6.329 15.5 6.6665 15.1625 6.6665 14.75V13.25C6.6665 12.8375 6.329 12.5 5.9165 12.5H4.4165C4.004 12.5 3.6665 12.8375 3.6665 13.25ZM9.6665 13.25V14.75C9.6665 15.1625 10.004 15.5 10.4165 15.5H11.9165C12.329 15.5 12.6665 15.1625 12.6665 14.75V13.25C12.6665 12.8375 12.329 12.5 11.9165 12.5H10.4165C10.004 12.5 9.6665 12.8375 9.6665 13.25ZM16.4165 12.5C16.004 12.5 15.6665 12.8375 15.6665 13.25V14.75C15.6665 15.1625 16.004 15.5 16.4165 15.5H17.9165C18.329 15.5 18.6665 15.1625 18.6665 14.75V13.25C18.6665 12.8375 18.329 12.5 17.9165 12.5H16.4165ZM3.6665 19.25V20.75C3.6665 21.1625 4.004 21.5 4.4165 21.5H5.9165C6.329 21.5 6.6665 21.1625 6.6665 20.75V19.25C6.6665 18.8375 6.329 18.5 5.9165 18.5H4.4165C4.004 18.5 3.6665 18.8375 3.6665 19.25ZM10.4165 18.5C10.004 18.5 9.6665 18.8375 9.6665 19.25V20.75C9.6665 21.1625 10.004 21.5 10.4165 21.5H11.9165C12.329 21.5 12.6665 21.1625 12.6665 20.75V19.25C12.6665 18.8375 12.329 18.5 11.9165 18.5H10.4165ZM15.6665 19.25V20.75C15.6665 21.1625 16.004 21.5 16.4165 21.5H17.9165C18.329 21.5 18.6665 21.1625 18.6665 20.75V19.25C18.6665 18.8375 18.329 18.5 17.9165 18.5H16.4165C16.004 18.5 15.6665 18.8375 15.6665 19.25Z'
                   fill='#797C86'
@@ -165,8 +175,8 @@ const DetailProperty = () => {
               xmlns='http://www.w3.org/2000/svg'
             >
               <path
-                fill-rule='evenodd'
-                clip-rule='evenodd'
+                fillRule='evenodd'
+                clipRule='evenodd'
                 d='M1.38916 13.5C3.33541 8.56125 8.13916 5.0625 13.7642 5.0625C19.3892 5.0625 24.1929 8.56125 26.1392 13.5C24.1929 18.4388 19.3892 21.9375 13.7642 21.9375C8.13916 21.9375 3.33541 18.4388 1.38916 13.5ZM23.6867 13.5C21.8304 9.70875 18.0279 7.3125 13.7642 7.3125C9.50041 7.3125 5.69791 9.70875 3.84166 13.5C5.69791 17.2913 9.48916 19.6875 13.7642 19.6875C18.0392 19.6875 21.8304 17.2913 23.6867 13.5ZM13.7642 10.6875C15.3167 10.6875 16.5767 11.9475 16.5767 13.5C16.5767 15.0525 15.3167 16.3125 13.7642 16.3125C12.2117 16.3125 10.9517 15.0525 10.9517 13.5C10.9517 11.9475 12.2117 10.6875 13.7642 10.6875ZM8.70166 13.5C8.70166 10.71 10.9742 8.4375 13.7642 8.4375C16.5542 8.4375 18.8267 10.71 18.8267 13.5C18.8267 16.29 16.5542 18.5625 13.7642 18.5625C10.9742 18.5625 8.70166 16.29 8.70166 13.5Z'
                 fill='#766969'
               />
@@ -230,8 +240,8 @@ const DetailProperty = () => {
             xmlns='http://www.w3.org/2000/svg'
           >
             <path
-              fill-rule='evenodd'
-              clip-rule='evenodd'
+              fillRule='evenodd'
+              clipRule='evenodd'
               d='M8.18567 7.66732C8.18567 5.55898 9.8915 3.83398 11.9998 3.83398H27.3332L38.8332 15.334V38.334C38.8332 40.4423 37.1082 42.1673 34.9998 42.1673H11.9807C9.87234 42.1673 8.1665 40.4423 8.1665 38.334L8.18567 7.66732ZM25.4165 6.70898V17.2507H35.9582L25.4165 6.70898Z'
               fill='#3151B7'
             />
@@ -247,8 +257,8 @@ const DetailProperty = () => {
             xmlns='http://www.w3.org/2000/svg'
           >
             <path
-              fill-rule='evenodd'
-              clip-rule='evenodd'
+              fillRule='evenodd'
+              clipRule='evenodd'
               d='M8.18567 7.66732C8.18567 5.55898 9.8915 3.83398 11.9998 3.83398H27.3332L38.8332 15.334V38.334C38.8332 40.4423 37.1082 42.1673 34.9998 42.1673H11.9807C9.87234 42.1673 8.1665 40.4423 8.1665 38.334L8.18567 7.66732ZM25.4165 6.70898V17.2507H35.9582L25.4165 6.70898Z'
               fill='#3151B7'
             />
@@ -264,8 +274,8 @@ const DetailProperty = () => {
             xmlns='http://www.w3.org/2000/svg'
           >
             <path
-              fill-rule='evenodd'
-              clip-rule='evenodd'
+              fillRule='evenodd'
+              clipRule='evenodd'
               d='M8.18567 7.66732C8.18567 5.55898 9.8915 3.83398 11.9998 3.83398H27.3332L38.8332 15.334V38.334C38.8332 40.4423 37.1082 42.1673 34.9998 42.1673H11.9807C9.87234 42.1673 8.1665 40.4423 8.1665 38.334L8.18567 7.66732ZM25.4165 6.70898V17.2507H35.9582L25.4165 6.70898Z'
               fill='#3151B7'
             />
@@ -331,19 +341,40 @@ const DetailProperty = () => {
       <SectionEnam>
         <SectionHeader>Video Tour</SectionHeader>
         <div className='videoType'>
-          <div className='video'>Video</div>
-          <div className='tour'>3D Tour</div>
+          <div
+            className={`video tourProperty ${
+              videoTypes === "video" ? "active" : ""
+            }`}
+            onClick={() => videoHanlder("video")}
+          >
+            Video
+          </div>
+          <div
+            className={`tour tourProperty ${
+              videoTypes === "tour" ? "active" : ""
+            }  `}
+            onClick={() => videoHanlder("tour")}
+          >
+            3D Tour
+          </div>
         </div>
         <div className='imageTour'>
-          {/* Ini Masih Gambar dulu, ntar masukin video aja kalau videonya ketemu */}
-          {/* <img src={RumahTour} alt='Rumah Tour' /> */}
-          <iframe
-            src={`https://my.matterport.com/show/?m=EAwuLRxafYg`}
-            width='100%'
-            height='500px'
-            frameborder='0'
-            title='360'
-          ></iframe>
+          {videoTypes === "video" ? (
+            <iframe
+              width='100%'
+              height='500px'
+              src='https://youtube.com/embed/0P64HU-6KCc'
+              title='videotour'
+            ></iframe>
+          ) : (
+            <iframe
+              src={`https://my.matterport.com/show/?m=EAwuLRxafYg`}
+              width='100%'
+              height='500px'
+              frameBorder='0'
+              title='360'
+            ></iframe>
+          )}
         </div>
       </SectionEnam>
       <SectionTujuh>
@@ -356,7 +387,8 @@ const DetailProperty = () => {
           {/* <img src={MapLocation} alt='Map Location' /> */}
           <iframe
             src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1978.6403667640202!2d112.73269336772266!3d-7.322330499999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbcc00d2f29f%3A0x90772c67667df2e6!2sMAPS%20by%20MAPALSA!5e0!3m2!1sen!2sid!4v1664787717722!5m2!1sen!2sid'
-            referrerpolicy='no-referrer-when-downgrade'
+            referrerPolicy='no-referrer-when-downgrade'
+            title='map'
           ></iframe>
         </div>
       </SectionTujuh>
@@ -379,8 +411,8 @@ const DetailProperty = () => {
                     xmlns='http://www.w3.org/2000/svg'
                   >
                     <path
-                      fill-rule='evenodd'
-                      clip-rule='evenodd'
+                      fillRule='evenodd'
+                      clipRule='evenodd'
                       d='M17 4.125L1.875 12.375L7.375 15.3725V23.6225L17 28.875L26.625 23.6225V15.3725L29.375 13.8738V23.375H32.125V12.375L17 4.125ZM26.3775 12.375L17 17.49L7.6225 12.375L17 7.26L26.3775 12.375ZM17 25.74L23.875 21.9862V16.8713L17 20.625L10.125 16.8713V21.9862L17 25.74Z'
                       fill='#756868'
                     />
@@ -403,8 +435,8 @@ const DetailProperty = () => {
                     xmlns='http://www.w3.org/2000/svg'
                   >
                     <path
-                      fill-rule='evenodd'
-                      clip-rule='evenodd'
+                      fillRule='evenodd'
+                      clipRule='evenodd'
                       d='M17 4.125L1.875 12.375L7.375 15.3725V23.6225L17 28.875L26.625 23.6225V15.3725L29.375 13.8738V23.375H32.125V12.375L17 4.125ZM26.3775 12.375L17 17.49L7.6225 12.375L17 7.26L26.3775 12.375ZM17 25.74L23.875 21.9862V16.8713L17 20.625L10.125 16.8713V21.9862L17 25.74Z'
                       fill='#756868'
                     />
@@ -429,8 +461,8 @@ const DetailProperty = () => {
                     xmlns='http://www.w3.org/2000/svg'
                   >
                     <path
-                      fill-rule='evenodd'
-                      clip-rule='evenodd'
+                      fillRule='evenodd'
+                      clipRule='evenodd'
                       d='M17 4.125L1.875 12.375L7.375 15.3725V23.6225L17 28.875L26.625 23.6225V15.3725L29.375 13.8738V23.375H32.125V12.375L17 4.125ZM26.3775 12.375L17 17.49L7.6225 12.375L17 7.26L26.3775 12.375ZM17 25.74L23.875 21.9862V16.8713L17 20.625L10.125 16.8713V21.9862L17 25.74Z'
                       fill='#756868'
                     />
@@ -453,8 +485,8 @@ const DetailProperty = () => {
                     xmlns='http://www.w3.org/2000/svg'
                   >
                     <path
-                      fill-rule='evenodd'
-                      clip-rule='evenodd'
+                      fillRule='evenodd'
+                      clipRule='evenodd'
                       d='M17 4.125L1.875 12.375L7.375 15.3725V23.6225L17 28.875L26.625 23.6225V15.3725L29.375 13.8738V23.375H32.125V12.375L17 4.125ZM26.3775 12.375L17 17.49L7.6225 12.375L17 7.26L26.3775 12.375ZM17 25.74L23.875 21.9862V16.8713L17 20.625L10.125 16.8713V21.9862L17 25.74Z'
                       fill='#756868'
                     />
@@ -776,14 +808,16 @@ const SectionEnam = styled.div`
     font-size: 18px;
     line-height: 33px;
 
-    .video {
-      color: #3151b7;
-      font-weight: 600;
-      border-bottom: 2px solid #3151b7;
-    }
-
+    .video,
     .tour {
       color: #746565;
+      cursor: pointer;
+
+      &.active {
+        color: #3151b7;
+        font-weight: 600;
+        border-bottom: 2px solid #3151b7;
+      }
     }
   }
 

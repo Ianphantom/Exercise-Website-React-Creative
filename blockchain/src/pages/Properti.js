@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-
 import Breadcrumb from "../components/Breadcrumb";
 import HeaderText from "../components/HeaderText";
+import Filter from "../components/Filter";
 
 // Import Property
 import property1 from "../img/property1.png";
@@ -15,6 +15,13 @@ import PropertyList from "../components/PropertyList";
 // import { Link } from "react-router-dom";
 
 const Properti = () => {
+  const [filterClicked, setFilterClicked] = useState(false);
+  const showFilter= () => {
+    setFilterClicked(!filterClicked);
+    filterClicked
+      ? (document.body.style.overflow = "auto")
+      : (document.body.style.overflow = "hidden");
+  };
   return (
     <StyledProperty className='container'>
       <Breadcrumb BreadcrumbText={`Home / Properti`} />
@@ -46,7 +53,7 @@ const Properti = () => {
           <option value='rumah'>Rumah</option>
           <option value='tanah'>Tanah</option>
         </select>
-        <button className='filterProperti'>Filter</button>
+        <button className='filterProperti' onClick={showFilter} alt='Filter'>Filter</button>
       </SearchPropertyContainer>
       <p className='jumlahProperti'>Terdapat 200 properti</p>
       <ListProperti>
@@ -87,6 +94,7 @@ const Properti = () => {
           luas={1400}
         />
       </ListProperti>
+      {filterClicked && <Filter filterClicked={filterClicked} setFilterClicked={setFilterClicked}/>}
     </StyledProperty>
   );
 };

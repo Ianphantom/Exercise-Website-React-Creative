@@ -23,6 +23,7 @@ import DaftarTransaksi from "./pages/DaftarTransaksi";
 import DaftarkanAsset from "./pages/DaftarkanAsset";
 import PropertiSaya from "./pages/PropertiSaya";
 import DetailTransaksi from "./pages/DetailTransaksi";
+import Pembelian from "./pages/Pembelian";
 
 function App() {
   const getToken = () => {
@@ -54,6 +55,7 @@ function App() {
         <Route exact path='/daftarasset' element={<DaftarkanAsset />} />
         <Route exact path='/propertisaya' element={<PropertiSaya />} />
         <Route exact path='/detailtransaksi' element={<DetailTransaksi />} />
+        <Route exact path='/pembelian' element={<Pembelian />} />
         <Route
           exact
           path='/penjadwalanberhasil'

@@ -8,9 +8,9 @@ import bri from "../img/bri.png";
 import bni from "../img/bni.png";
 
 const PembelianStepTwo = ({ setStepActive }) => {
-  // const nextHandler = () => {
-  //   setStepActive("3");
-  // };
+  const nextHandler = () => {
+    setStepActive("3");
+  };
   const kembaliHandler = () => {
     setStepActive("1");
   };
@@ -235,7 +235,9 @@ const PembelianStepTwo = ({ setStepActive }) => {
         <ButtonStyled className='secondary' onClick={kembaliHandler}>
           Kembali
         </ButtonStyled>
-        <ButtonStyled className='primary'>Selanjutnya</ButtonStyled>
+        <ButtonStyled className='primary' onClick={nextHandler}>
+          Selanjutnya
+        </ButtonStyled>
       </ButtonContainer>
     </PembelianStepTwoStyled>
   );

@@ -6,6 +6,7 @@ import HeaderText from "../components/HeaderText";
 
 import PembelianStepOne from "../components/PembelianStepOne";
 import PembelianStepTwo from "../components/PembelianStepTwo";
+import PembelianStepThree from "../components/PembelianStepThree";
 
 const Pembelian = () => {
   const [stepActive, setStepActive] = useState("1");
@@ -58,6 +59,12 @@ const Pembelian = () => {
           )}
           {stepActive === "2" && (
             <PembelianStepTwo
+              setStepActive={setStepActive}
+              stepActive={stepActive}
+            />
+          )}
+          {stepActive === "3" && (
+            <PembelianStepThree
               setStepActive={setStepActive}
               stepActive={stepActive}
             />

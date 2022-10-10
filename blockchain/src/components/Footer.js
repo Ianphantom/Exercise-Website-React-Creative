@@ -98,6 +98,8 @@ const FooterContainer = styled.div`
 
     button {
       background: #f89047;
+      box-shadow: 0px 6px 40px rgba(255, 167, 105, 0.46);
+      border-radius: 10px;
       padding: 9px 29px 11px 31px;
       border: none;
       color: white;
